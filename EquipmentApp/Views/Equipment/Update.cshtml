@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Update</h1>
+
+<div id="editForm">
+    <h3>Edit</h3>
+
+    <form action="javascript:void(0); " onsubmit="UpdateItem()">
+        <div class="form-group">
+            <input type="text" id="editEquipmentId" placeholder="Id" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="text" id="editEquipmentName" placeholder="EquipmentName" class="form-control" />
+                   </div>
+        <div class="form-group">
+            <input type="text" id="editEquipmentCurrency" placeholder="EquipmentCurrency" class="form-control"/>
+            </div>
+        <div class="form-group">
+            <input type="text" id="editEquipmentPurchasedate" placeholder="EquipmentPurchasedate" class="form-control"/>
+            </div>
+            <input type="submit" value=" Update" />
+    </form>
+</div>
+
+<p id="counter"></p>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Equipment Id</th>
+            <th>Equipment Name</th>
+            <th>Equipment Currency</th>
+            <th>EquipmentPurchasedate</th>
+
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody id="equipmentlist"></tbody>
+</table>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+<script type="text/javascript">
+
+
+    GetEquipments();
+
+</script>
+
+
+
+

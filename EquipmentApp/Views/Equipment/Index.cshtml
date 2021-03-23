@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-lg-3">
+        @Html.ActionLink("Add ", "Add")
+       </div>
+ </div>
+<div class="row">
+        <div class="col-lg-3">
+
+
+                @Html.ActionLink("Update ", "Update")
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-lg-3">
+
+                        @Html.ActionLink("Delete ", "Delete")
+                    </div>
+                </div>
+<div class="row">
+                    <div class="col-lg-9">
+
+                        <h1>Index</h1>
+
+                        <p id="counter"></p>
+
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Equipment Id</th>
+                                    <th>Equipment Name</th>
+                                    <th>Equipment Currency</th>
+                                    <th>EquipmentPurchasedate</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="equipmentlist"></tbody>
+                        </table>
+
+                        <script src="~/js/site.js" asp-append-version="true"></script>
+
+                        <script type="text/javascript">
+
+
+                            GetEquipments();
+
+                        </script>
+                    </div>
+</div>
+

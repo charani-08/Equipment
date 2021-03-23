@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+
+<form action="javascript:void(0); " method="POST" onsubmit="addEquipment()">
+    
+    <div class="form-group">
+        <span style="color:Red" visible="false" runat="server">*</span>
+        <input type="text" id="EquipmentName" placeholder="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <span style="color:Red" visible="false" runat="server">*</span>
+        <input type="text" id="EquipmentCurrency" placeholder="Price" class="form-control" />
+    </div>
+    <div class="form-group">
+        <span style="color:Red" visible="false" runat="server">*</span>
+        <input type="text" id="EquipmentPurchasedate" placeholder="Purchasedate" class="form-control" />
+    </div>
+    <input type="submit" value="Add" />
+</form>
+
+<p id="counter"></p>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Equipment Id</th>
+            <th>Equipment Name</th>
+            <th>Equipment Currency</th>
+            <th>EquipmentPurchasedate</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody id="equipmentlist"></tbody>
+</table>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+<script type="text/javascript">
+
+
+    GetEquipments();
+
+</script>
+
+
+
